@@ -1,0 +1,11 @@
+version: v1
+plugins:
+  # remote plugins
+  - plugin: buf.build/bufbuild/validate-go
+    out: gen
+    opt:
+      - paths=source_relative
+  - plugin: buf.build/protocolbuffers/go:v1.30.0
+    out: gen
+    opt:
+      - paths=source_relative

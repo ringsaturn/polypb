@@ -1,0 +1,25 @@
+# Convert polygon data into efficient format for distribution and lookup.
+
+This project will provide series of tools to convert polygon data into binary
+format and provide libraries to read and lookup the data. I expect to support Go
+at first, then Rust and Python(via Rust binding).
+
+Other repo for binary distritution might be created to provide pre-converted
+data for use, via GitHub release.
+
+## Background
+
+This project was originally designed and implemented in the
+[tzf](https://github.com/ringsaturn/tzf) project. I decided to extract the
+polygon data processing into a standalone project to improve maintenance and
+distribution. I aim to reuse the similar pipeline for additional data sources,
+such as administrative boundaries.
+
+The fundamental concept behind this project is to cater to server-side use
+cases, which requires loading all data into memory for in-memory lookups. This
+approach is not suitable for client-side use cases, where data needs to be
+loaded on demand for lookups. Since I have decided to continue using Protocol
+Buffers as the data format, support for random reads will not be available.
+
+tzf/tzf-rs/tzfpy will be contined support until this project is mature enough
+and I will migrate the code to use this project.

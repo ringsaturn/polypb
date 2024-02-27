@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/mitchellh/mapstructure"
-	polypbv1 "github.com/ringsaturn/polypb/gen/polypb/v1"
+	polypbv1 "github.com/ringsaturn/polypb/gen/go/polypb/v1"
 )
 
 const (
